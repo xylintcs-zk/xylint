@@ -1,0 +1,102 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    width: 50%;
+    max-width: 800px;
+    height: 80vh;
+    padding: 0;
+    box-sizing: border-box;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card-header {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px 18px 0 0;
+    font-weight: bold;
+}
+
+.chat {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.my-msg {
+    align-self: flex-end;
+    border-radius: 12px 12px 0 12px;
+    background-color: #4169e1;
+    color: #fff;
+    padding: 10px 14px;
+    max-width: 75%;
+    width: fit-content;
+    word-wrap: break-word;
+}
+
+.response {
+    align-self: flex-start;
+    border-radius: 12px 12px 12px 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 14px;
+    max-width: 75%;
+    width: fit-content;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.input-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0 0 18px 18px;
+    background-color: #1c1c1c;
+}
+
+.input-wrapper textarea {
+    flex: 1;
+    min-height: 50px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    resize: none;
+}
+
+.input-wrapper textarea:focus {
+    border-color: #4169e1;
+    background: #242424;
+}
+
+.card-actions {
+    display: flex;
+    gap: 12px;
+    padding: 15px 20px;
+}
+
+.card-actions button {
+    flex: 1;
+}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Xylint{% endblock %}
+{% block content %}
+<div class="card-container">
+    <div class="card">
+        <div class="card-header">
+            <p>Xylint</p>
+            <p>BETA</p>
+        </div>
+
+        <div class="chat" id="chat">
+            {% for sender, message in chat_history %}
+                {% if sender == 'user' %}
+                    <p class="my-msg">{{ message }}</p>
+                {% else %}
+                    <p class="response">{{ message }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <form id="chat-form">
+            <div class="input-wrapper">
+                <textarea id="cmd" name="cmd" placeholder="Type here.."></textarea>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
